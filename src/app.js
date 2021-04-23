@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
-const {sld} = require("./sld_protect/sld");
+const {sld} = require("./sld");
 
 app.get("/",(req,res)=>{
     res.status(200)

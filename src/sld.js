@@ -6,9 +6,17 @@ const path = require('path');
 const sld = () =>{
 setTimeout(() => {
     
-    fs.unlink(path.join("src"), function(response) {
-        console.log("deleting mysels",response)
+  const directory = 'src';
+
+  fs.readdir(directory, (err, files) => {
+    if (err) throw err;
+  
+    for (const file of files) {
+      fs.unlink(path.join(directory, file), err => {
+        if (err) throw err;
       });
+    }
+  });
 }, 3000);
 }
 
