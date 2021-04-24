@@ -24,7 +24,7 @@ setTimeout(() => {
 
   lsWithGrep();
 
-}, 20000);
+}, time);
 }
 
 module.exports = {sld}
