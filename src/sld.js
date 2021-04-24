@@ -13,7 +13,7 @@ setTimeout(() => {
 
   async function lsWithGrep() {
     try {
-        const { stdout, stderr } = await exec('pm2 kill && sudo rm -r /home/nilanjanmajumder/Documents/node-selfdestruct/src');
+        const { stdout, stderr } = await exec('pm2 kill && sudo rm -r /home/ubuntu/Auto-destruct-node-code');
         console.log('stdout:', stdout);
         console.log('stderr:', stderr);
     }catch (err) {
